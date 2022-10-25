@@ -1,9 +1,68 @@
 ---
+import Button from '../components/Button.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Home">
-  <main>
-    <h1>Call me Data</h1>
-  </main>
+  <section class="bg-slate-800 h-screen overflow-hidden">
+    <div class="h-full max-w-3xl mx-auto relative">
+      <h1 class="title"></h1>
+      <img src="./portrait.jpg" class="img" />
+      <div class="buttons">
+        <Button title="Console" href="console" />
+        <Button title="Resume" href="resume" />
+      </div>
+    </div>
+  </section>
 </Layout>
+<style>
+  @keyframes centerToTop {
+    to {
+      top: 20px;
+      transform: translate(-50%, 0);
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+  .title {
+    --content-length: 4;
+    --content: 'Data';
+    animation: typing 1.5s steps(var(--content-length)),
+      centerToTop 0.5s ease-in-out 2s forwards;
+    transform: translate(-50%, -50%);
+    width: calc(var(--content-length) * 1ch);
+    @apply text-8xl font-mono whitespace-nowrap overflow-hidden absolute text-slate-300 top-1/2 left-1/2;
+  }
+  .title::after {
+    content: var(--content);
+  }
+  @media screen and (min-width: 768px) {
+    .title {
+      --content: 'Call Me Data';
+      --content-length: 12;
+    }
+  }
+  @keyframes fromBottom {
+    to {
+      transform: translateY(0);
+    }
+  }
+  .buttons {
+    transform: translateY(200%);
+    animation: fromBottom 0.5s ease-in-out 2.5s forwards;
+    @apply w-full flex flex-row justify-center items-center gap-3 absolute bottom-4 px-4;
+  }
+  @keyframes zoomIn {
+    to {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  .img {
+    @apply rounded-full absolute top-1/2 left-1/2 w-64 h-64;
+    transform: translate(-50%, -50%) scale(0);
+    animation: zoomIn 0.5s ease-in-out 2.5s forwards;
+  }
+</style>
