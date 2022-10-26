@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Home">
-  <section class="bg-slate-800 h-screen overflow-hidden">
+  <section class="bg-slate-900 h-screen overflow-hidden">
     <div class="h-full max-w-3xl mx-auto relative">
       <h1 class="title"></h1>
       <img src="./portrait_256.webp" class="img" />
@@ -34,7 +34,7 @@ import Layout from '../layouts/Layout.astro'
       centerToTop 0.5s ease-in-out 2s forwards;
     transform: translate(-50%, -50%);
     width: calc(var(--content-length) * 1ch);
-    @apply text-8xl font-mono whitespace-nowrap overflow-hidden absolute text-slate-300 top-1/2 left-1/2;
+    @apply text-8xl font-mono whitespace-nowrap overflow-hidden absolute top-1/2 left-1/2;
   }
   .title::after {
     content: var(--content);
