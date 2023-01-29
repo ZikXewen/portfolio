@@ -1,19 +1,17 @@
 ---
-import Button from '../components/Button.astro'
+import Button from '../components/index/Button.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Home">
-  <section class="bg-slate-900 h-screen overflow-hidden">
-    <div class="h-full max-w-3xl mx-auto relative">
-      <h1 class="title"></h1>
-      <img src="./portrait_256.webp" class="img" />
-      <div class="buttons">
-        <Button title="Console" href="console" />
-        <Button title="Resume" href="resume" />
-      </div>
+  <div class="h-full max-w-3xl mx-auto relative">
+    <h1 class="title"></h1>
+    <img src="./portrait_256.webp" class="img" />
+    <div class="buttons">
+      <Button title="Console" href="console" />
+      <Button title="Resume" href="resume" />
     </div>
-  </section>
+  </div>
 </Layout>
 <style>
   @keyframes centerToTop {
