@@ -1,52 +1,21 @@
 ---
-import Command from '../components/console/Command.html'
-import Header from '../components/console/Header.html'
+import Header from '../components/console/Header.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
-<script>
-  const input = document.getElementById('input') as HTMLInputElement
-  const commands = document.getElementById('commands') as HTMLDivElement
-  // const commandList = ['help', 'ls', 'cd', 'cat', 'clear', 'exit']
-  input.addEventListener('keypress', async (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault()
-      const command = input.value
-      input.value = ''
-
-      const newCommand = document.createElement('div')
-      newCommand.classList.add('flex')
-      newCommand.innerHTML =
-        (await import('../components/console/Command.html')).default.render({
-          slots: {},
-        }) + command
-      commands.appendChild(newCommand)
-
-      switch (command) {
-        case 'help':
-          break
-        case 'ls':
-          break
-        case 'cd':
-          break
-        case 'cat':
-          break
-        case 'clear':
-          break
-        case 'exit':
-          break
-        default:
-          break
-      }
-    }
-  })
-</script>
+<script src="../components/console/scripts/main.ts"></script>
 <Layout title="Console">
-  <div class="bg-slate-900 min-h-screen font-mono p-4 text-lg">
+  <div class="font-mono p-4 text-lg" id="console-body">
     <Header />
     <div id="commands"></div>
     <div class="flex">
-      <Command />
+      <div id="prompt">
+        <p class="mr-2">
+          <span class="text-emerald-400">guest@terminal</span>:<span
+            class="text-sky-400">~</span
+          >$
+        </p>
+      </div>
       <input
         class="bg-transparent outline-none placeholder:opacity-50 flex-1"
         placeholder="help"
