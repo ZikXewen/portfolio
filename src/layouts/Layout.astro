@@ -19,9 +19,12 @@ const { title } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Supanat Suriyodorn</title>
   </head>
-  <body
-    class="h-screen cursor-custom overflow-y-auto scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-transparent"
-  >
-    <slot />
+  <body>
+    <div
+      id="root"
+      class="h-screen bg-slate-900 overflow-y-scroll scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-transparent text-sky-200 scroll-smooth"
+    >
+      <slot />
+    </div>
   </body>
 </html>
