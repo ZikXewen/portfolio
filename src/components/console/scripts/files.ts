@@ -130,6 +130,17 @@ export const files: Dir = {
                     versions.</p>`,
                 },
                 {
+                  name: 'submissions.txt',
+                  type: 'text',
+                  text: `<p>
+                    <a href="https://github.com/ZikXewen/submissions" class="text-sky-400 hover:underline">Submissions</a> is my history in competitive programming.
+                  </p>
+                  <p>I've already stepped away from competitive programming for a while</p>
+                  <p>But it was a fun journey, and I'm glad I did it.</p>
+                  <p>They were all in C++. And it still is my largest repo on GitHub.</p>
+                    `,
+                },
+                {
                   name: 'kratua.txt',
                   type: 'text',
                   text: `<p>
@@ -139,6 +150,16 @@ export const files: Dir = {
                   <p>It was my first big project, and you can read more about it <a href="https://medium.com/@datasup12/my-bizarre-first-project-cac4a5023be2" class="text-sky-400 hover:underline">HERE</a>.</p>
                   <p>The actual site is probably down from inactivity, but you can still check out the code.</p>
                   <p>It was made with the MERN stack. With a self-trained PyTorch model hosted with Flask.</p>
+                  `,
+                },
+                {
+                  name: 'hppr.txt',
+                  type: 'text',
+                  text: `<p>
+                    <a href="https://github.com/ZikXewen/hppr" class="text-sky-400 hover:underline">HPPR</a> is a platformer game I made for educational purposes.
+                  </p>
+                  <p>I got to learn about graphics and physics in game developement.</p>
+                  <p>It was mainly made with Rust and bevy.</p>
                   `,
                 },
                 {
