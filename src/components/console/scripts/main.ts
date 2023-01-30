@@ -24,7 +24,7 @@ input.addEventListener('keydown', async (e) => {
   }
   if (e.key === 'Enter') {
     e.preventDefault()
-    command = input.value
+    command = input.value.trim()
     const [cmd, ...args] = command.split(' ')
     input.value = ''
 
@@ -121,9 +121,9 @@ function execute(cmd: string, args: string[]): void {
         </p>
         ${commandList
           .map((file) => {
-            return `<p><span class="text-sky-400 whitespace-pre">${file.name.padEnd(
+            return `<pre><span class="text-sky-400">${file.name.padEnd(
               8
-            )}</span>${file.description}</p>`
+            )}</span>${file.description}</pre>`
           })
           .join('\n')}
         `)
@@ -148,13 +148,11 @@ function execute(cmd: string, args: string[]): void {
         break
       }
       respond(
-        `<pre>${dir.content
+        dir.content
           .map((file) => {
-            return `<span class="${getColor(file.type)}">${file.name.padEnd(
-              16
-            )}</span>`
+            return `<p class="${getColor(file.type)}">${file.name}</p>`
           })
-          .join('\n')}</pre>`
+          .join('\n')
       )
       break
     }
