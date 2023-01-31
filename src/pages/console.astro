@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro'
 
 <script src="../components/console/scripts/main.ts"></script>
 <Layout title="Console">
-  <div class="font-mono p-4 text-lg" id="console-body">
+  <div class="p-4 font-mono text-lg" id="console-body">
     <Header />
     <div id="commands"></div>
     <div class="flex">
@@ -17,7 +17,7 @@ import Layout from '../layouts/Layout.astro'
         </p>
       </div>
       <input
-        class="bg-transparent outline-none placeholder:opacity-50 flex-1"
+        class="flex-1 bg-transparent outline-none placeholder:opacity-50"
         placeholder="help"
         autofocus
         autocomplete="false"

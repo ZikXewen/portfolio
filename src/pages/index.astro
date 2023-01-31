@@ -4,10 +4,18 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Home">
-  <div class="h-full max-w-3xl mx-auto relative">
-    <h1 class="title"></h1>
-    <img src="./portrait_256.webp" class="img" />
-    <div class="buttons">
+  <div class="relative mx-auto h-full max-w-3xl overflow-hidden">
+    <h1
+      class="title absolute top-1/2 left-1/2 overflow-hidden whitespace-nowrap font-mono text-8xl"
+    >
+    </h1>
+    <img
+      src="./portrait_256.webp"
+      class="img absolute top-1/2 left-1/2 h-64 w-64 rounded-full"
+    />
+    <div
+      class="buttons absolute bottom-4 flex w-full flex-row items-center justify-center gap-3 px-4"
+    >
       <Button title="Console" href="console" />
       <Button title="Resume" href="resume" />
     </div>
@@ -33,7 +41,6 @@ import Layout from '../layouts/Layout.astro'
     transform: translate(-50%, -50%);
     width: calc(var(--content-length) * 48px);
     /* using 1ch caused some issues */
-    @apply text-8xl font-mono whitespace-nowrap overflow-hidden absolute top-1/2 left-1/2;
   }
   .title::after {
     content: var(--content);
@@ -52,7 +59,6 @@ import Layout from '../layouts/Layout.astro'
   .buttons {
     transform: translateY(200%);
     animation: fromBottom 0.5s ease-in-out 2.5s forwards;
-    @apply w-full flex flex-row justify-center items-center gap-3 absolute bottom-4 px-4;
   }
   @keyframes zoomIn {
     to {
@@ -60,7 +66,6 @@ import Layout from '../layouts/Layout.astro'
     }
   }
   .img {
-    @apply rounded-full absolute top-1/2 left-1/2 w-64 h-64;
     transform: translate(-50%, -50%) scale(0);
     animation: zoomIn 0.5s ease-in-out 2.5s forwards;
   }
