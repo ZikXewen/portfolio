@@ -17,8 +17,16 @@ let dirStack = [...homeStack]
 
 let command = ''
 input.addEventListener('keydown', async (e) => {
+  if (e.key === 'Tab') {
+    e.preventDefault()
+    const [cmd, path] = input.value.split(' ')
+    const auto = autoComplete(path)
+    if (auto) input.value = `${cmd} ${auto}`
+    return
+  }
+  matches = []
+  currentMatch = 0
   if (e.key === 'ArrowUp') {
-    console.log(command)
     e.preventDefault()
     input.value = command
   }
@@ -39,6 +47,28 @@ input.addEventListener('keydown', async (e) => {
     root.scrollTop = root.scrollHeight
   }
 })
+
+let matches: string[] = []
+let currentMatch = 0
+function autoComplete(path: string): string | undefined {
+  if (matches.length) {
+    currentMatch++
+    if (currentMatch === matches.length) currentMatch = 0
+    return matches[currentMatch]
+  }
+  const dir = path.split('/')
+  const fd = dir.pop() || ''
+  const dirPath = (dir.join('/') || (path.startsWith('/') ? '' : '.')) + '/'
+  const stk = parsePath(dirPath)
+  if (!stk) return
+  const cur = stk[stk.length - 1]
+  if (cur.type !== 'dir') return
+  matches = cur.content
+    .filter((file) => file.name.startsWith(fd))
+    .map((file) => dirPath + file.name)
+  if (matches.length) return matches[0]
+  return
+}
 
 function generatePrompt(): string {
   let path = dirStack.map((file) => file.name).join('/') || '/'
@@ -64,7 +94,6 @@ function parsePath(spath: string): File[] | null {
     cur = [...dirStack]
   } else cur = [...dirStack]
   if (path[path.length - 1] === '') path.pop()
-  console.log(cur, path)
   for (const p of path) {
     if (p === '..') cur.pop()
     else {
