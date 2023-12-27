@@ -60,7 +60,7 @@ export const files: Dir = {
               type: 'text',
               text: `
                 <p>Hey, this is Data. You might've heard of me as ZikXewen.</p>
-                <p>As of Spring 2023, I am a Computer Engineering freshman at UW-Madison.</p>
+                <p>As of Fall 2023, I am a Computer Engineering sophomore at UW-Madison.</p>
                 <p>
                   During my highschool years at Triam Udom Suksa, the whole world was
                   struck down with COVID-19.
@@ -70,12 +70,54 @@ export const files: Dir = {
                   on gaming.
                 </p>
                 <p>Incidentally, I found web development intriguing and tried my hand on it.</p>
-                <p>The rest is history...</p>`,
+                <p>The rest is history...</p>
+                <p>Update Dec 2023: I got to try my hand on tons of other things, and now am interested in DevOps and Security.</p>
+                `,
+            },
+            {
+              name: 'internships',
+              type: 'dir',
+              content: [
+                {
+                  name: '2023-summer-agoda.txt',
+                  type: 'text',
+                  text: `
+                    <p>I was accepted to Agoda's Summer Internship for Summer 2023 as a frontend/fullstack software engineer.</p>
+                    <p>It was my first experience with an organization-level codebases and practices, which was immeasurably valuable.</p>
+                    <p>The main technologies I used were React with Typescript and .NET with C#.</p>
+                    <p>My role was to optimize some slower pages, which lead me to work with backend quite a lot too.</p>
+                    <p>Some other technologies I got to experience were Gitlab, Grafana, GraphQL, Consul, and Docker.</p>
+                  `,
+                },
+              ],
             },
             {
               name: 'projects',
               type: 'dir',
               content: [
+                {
+                  name: 'wip-grank.txt',
+                  type: 'text',
+                  text: `<p>
+                    <a href="https://github.com/ZikXewen/grank" class="text-sky-400 hover:underline">GRank</a> is a work-in-progress project I'm doing to learn about web development.
+                  </p>
+                  <p>It is a simple ranking platform for customized purposes.</p>
+                  <p>I created it to learn more about Bun, monorepo and workspace, Next.js 13, Zod, and LibSQL with Turso.</p>
+                  <p>I had to put it on hold since Bun was being clunky and had limited features on release.</p>
+                  <p>It was fun learning lots of things at once, especially trying out monorepo and working with multiple packages.</p>
+                  `,
+                },
+                {
+                  name: 'wip-aoc.txt',
+                  type: 'text',
+                  text: `<p>
+                    <a href="https://github.com/ZikXewen/advent-of-code" class="text-sky-400 hover:underline">AoC</a> is my opinionated workstation for Advent of Code event.
+                  </p>
+                  <p>I made it to learn about Rust meta-programming and to practice my Rust skills.</p>
+                  <p>The macro system can be used to avoid boilerplate code for maximum productivity.</p>
+                  <p>Update Dec 2023: I am still doing AoC 2023, and is trying to work with multiple languages just for practice.</p>
+                  `,
+                },
                 {
                   name: 'pdb.txt',
                   type: 'text',
@@ -105,16 +147,6 @@ export const files: Dir = {
                   <p>It was purposely complicated to make me learn more about web development.</p>
                   <p>It used Preact, Svelte, Vanilla JS, Tailwind, and Rust WebAssembly combined together by Astro.</p>
                     `,
-                },
-                {
-                  name: 'aoc.txt',
-                  type: 'text',
-                  text: `<p>
-                    <a href="https://github.com/ZikXewen/advent-of-code" class="text-sky-400 hover:underline">AoC</a> is my opinionated workstation for Advent of Code event.
-                  </p>
-                  <p>I made it to learn about Rust meta-programming and to practice my Rust skills.</p>
-                  <p>The macro system can be used to avoid boilerplate code for maximum productivity.</p>
-                  `,
                 },
                 {
                   name: 'mcspotify.txt',
@@ -189,10 +221,9 @@ export const files: Dir = {
                 <p>Links are clickable, hover over them to see the URL.</p>
                 <pre class="decoration-sky-400">
 <a href="https://github.com/ZikXewen" class="hover:underline"><span class="text-sky-400">github    </span>ZikXewen</a>
-<a href="https://www.instagram.com/ss.data" class="hover:underline"><span class="text-sky-400">instagram </span>@ss.data</a>
-<a href="https://www.facebook.com/supdata" class="hover:underline"><span class="text-sky-400">facebook  </span>Data Sup Srd</a>
-<a href="https://twitter.com/ZXewen" class="hover:underline"><span class="text-sky-400">twitter   </span>ZikXewen</a>
-</pre>`,
+<a href="https://instagram.com/ss.data" class="hover:underline"><span class="text-sky-400">instagram </span>@ss.data</a>
+<a href="https://facebook.com/supdata" class="hover:underline"><span class="text-sky-400">facebook  </span>Data Sup Srd</a>
+<a href="https://x.com/ZXewen" class="hover:underline"><span class="text-sky-400">X         </span>@ZXewen</a></pre>`,
             },
           ],
         },
