@@ -60,7 +60,7 @@ export const files: Dir = {
               type: 'text',
               text: `
                 <p>Hey, this is Data. You might've heard of me as ZikXewen.</p>
-                <p>As of Fall 2023, I am a Computer Engineering sophomore at UW-Madison.</p>
+                <p>As of Fall 2024, I am a Computer Engineering junior at UW-Madison.</p>
                 <p>
                   During my highschool years at Triam Udom Suksa, the whole world was
                   struck down with COVID-19.
@@ -71,7 +71,6 @@ export const files: Dir = {
                 </p>
                 <p>Incidentally, I found web development intriguing and tried my hand on it.</p>
                 <p>The rest is history...</p>
-                <p>Update Dec 2023: I got to try my hand on tons of other things, and now am interested in DevOps and Security.</p>
                 `,
             },
             {
@@ -89,6 +88,20 @@ export const files: Dir = {
                     <p>Some other technologies I got to experience were Gitlab, Grafana, GraphQL, Consul, and Docker.</p>
                   `,
                 },
+                {
+                  name: '2024-summer-agoda.txt',
+                  type: 'text',
+                  text: `
+                    <p>I also worked with Agoda in 2024 as a fullstack software engineer intern.</p>
+                    <p>This time I was distributed to another team, which is full of senior and staff employees.</p>
+                    <p>The experience is completely different, as this team is way bigger and works with multiple projects.</p>
+                    <p>My personal goal this time was to try my hands on as many repositories and technologies as I could.</p>
+                    <p>I got to implement several features, from SQL to backend with Scala and Kotlin to frontend with React.</p>
+                    <p>I also got to maintain some older projects such as an old webpage that was built with Django.</p>
+                    <p>Working with deployment was also exciting and challenging to me.</p>
+                    <p>Making Docker and Gitlab CI scripts was trivial, but service meshes and orchestration is still confusing to me.</p>
+                  `
+                }
               ],
             },
             {
