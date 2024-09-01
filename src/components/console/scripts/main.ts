@@ -151,7 +151,7 @@ function execute(cmd: string, args: string[]): void {
         ${commandList
           .map((file) => {
             return `<pre><span class="text-sky-400">${file.name.padEnd(
-              8
+              8,
             )}</span>${file.description}</pre>`
           })
           .join('\n')}
@@ -181,7 +181,7 @@ function execute(cmd: string, args: string[]): void {
           .map((file) => {
             return `<p class="${getColor(file.type)}">${file.name}</p>`
           })
-          .join('\n')
+          .join('\n'),
       )
       break
     }
@@ -205,7 +205,7 @@ function execute(cmd: string, args: string[]): void {
       const stk = parsePath(path || '.')
       if (!stk) {
         respond(
-          `<p>cat: cannot access '${path}': No such file or directory</p>`
+          `<p>cat: cannot access '${path}': No such file or directory</p>`,
         )
         break
       }

@@ -100,8 +100,8 @@ export const files: Dir = {
                     <p>I also got to maintain some older projects such as an old webpage that was built with Django.</p>
                     <p>Working with deployment was also exciting and challenging to me.</p>
                     <p>Making Docker and Gitlab CI scripts was trivial, but service meshes and orchestration is still confusing to me.</p>
-                  `
-                }
+                  `,
+                },
               ],
             },
             {

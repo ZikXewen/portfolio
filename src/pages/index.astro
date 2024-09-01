@@ -6,12 +6,12 @@ import Layout from '../layouts/Layout.astro'
 <Layout title="Home">
   <div class="relative mx-auto h-full max-w-3xl overflow-hidden">
     <h1
-      class="title absolute top-1/2 left-1/2 overflow-hidden whitespace-nowrap font-mono text-8xl"
+      class="title absolute left-1/2 top-1/2 overflow-hidden whitespace-nowrap font-mono text-8xl"
     >
     </h1>
     <img
       src="./portrait_256.webp"
-      class="img absolute top-1/2 left-1/2 h-64 w-64 rounded-full"
+      class="img absolute left-1/2 top-1/2 h-64 w-64 rounded-full"
     />
     <div
       class="buttons absolute bottom-4 flex w-full flex-row items-center justify-center gap-3 px-4"
@@ -36,7 +36,8 @@ import Layout from '../layouts/Layout.astro'
   .title {
     --content-length: 4;
     --content: 'Data';
-    animation: typing 1.5s steps(var(--content-length)),
+    animation:
+      typing 1.5s steps(var(--content-length)),
       centerToTop 0.5s ease-in-out 2s forwards;
     transform: translate(-50%, -50%);
     width: calc(var(--content-length) * 48px);

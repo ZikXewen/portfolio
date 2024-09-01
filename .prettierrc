@@ -2,7 +2,6 @@
   "semi": false,
   "singleQuote": true,
   "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-  "pluginSearchDirs": false,
   "overrides": [
     {
       "files": "*.astro",
