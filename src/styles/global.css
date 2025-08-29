@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@plugin "tailwind-scrollbar";
+@theme {
+  --font-mono: "Ubuntu Mono", monospace;
+}
